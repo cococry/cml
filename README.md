@@ -1,2 +1,4 @@
 # cml
-C Linear Algebra Library
+![](git-assets/logo.png)
+
+## Overview
