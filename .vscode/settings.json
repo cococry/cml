@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "assert.h": "c",
+        "string.h": "c",
+        "vector.h": "c",
+        "math.h": "c",
+        "corecrt_math.h": "c",
+        "cml.h": "c",
+        "matrix.h": "c",
+        "matrix_transform.h": "c"
+    }
+}
