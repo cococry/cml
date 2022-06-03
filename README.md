@@ -17,7 +17,7 @@ all the .h files in order to use the library.
 
 That's it! 
 
-##💥Features
+## 💥Features
 
 - Full vector support (operations, scalers, cross, dot, normalize etc.)
 - Full matrices support (operations, scalers, identity, transpose, etc.)
