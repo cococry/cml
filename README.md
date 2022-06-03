@@ -4,7 +4,7 @@
 ## Overview
 CML ( C Math Library ) is a linear algebra library for c and developed mainly for graphics development. 
 The main purpose of the creation of CML was to improve on [cglm](https://github.com/recp/cglm) in the way i needed it. 
-Of cglm is a very good library in a lot of ways and they have my full respect. 
+Of cource cglm is a very good library in a lot of ways and they have my full respect. 
 CML is a lightweight, easy to use and to compile library. The library only constists of .c and .h files which makes compilation a lot easier. 
 The library does not build a lib or a dll file and runns on any C compiler (gcc, clang, mingw etc.). 
 
