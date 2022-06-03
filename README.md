@@ -1,4 +1,4 @@
 # cml
-![](git-assets/logo.png)
+<image src="git-assets/logo.png" alt="logo"></image>
 
 ## Overview
