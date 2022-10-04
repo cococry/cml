@@ -9,9 +9,9 @@ typedef unsigned char BOOL;
     (sizeof((type[]){0.0f, ##__VA_ARGS__}) / sizeof(type) - 1)
 
 typedef unsigned char u8;
-typedef unsigned char u16;
-typedef unsigned char u32;
-typedef unsigned char u64;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef unsigned long long u64;
 
 typedef signed char i8;
 typedef signed char i16;

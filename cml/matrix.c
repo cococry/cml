@@ -169,6 +169,7 @@ matrix cml_matrix_scaler_subst(matrix m, float scaler) {
             ret.values[r][c] = m.values[r][c] - scaler;
         }
     }
+    return ret;
 }
 
 void cml_matrix_subst_scaler(matrix* m, float scaler) {
@@ -187,6 +188,7 @@ matrix cml_matrix_scaler_mult(matrix m, float scaler) {
             ret.values[r][c] = m.values[r][c] * scaler;
         }
     }
+    return ret;
 }
 
 void cml_matrix_mult_by_scaler(matrix* m, float scaler) {
@@ -205,6 +207,7 @@ matrix cml_matrix_scaler_div(matrix m, float scaler) {
             ret.values[r][c] = m.values[r][c] / scaler;
         }
     }
+    return ret;
 }
 
 void cml_matrix_div_by_scaler(matrix* m, float scaler) {

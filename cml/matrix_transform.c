@@ -43,11 +43,6 @@ matrix cml_rotate(matrix m, float angle, vector v) {
 
     matrix ret = cml_matrix_allocate(4, 4);
 
-    vector m0 = cml_matrix_get_col(&m, 1);
-    vector m1 = cml_matrix_get_col(&m, 2);
-    vector m2 = cml_matrix_get_col(&m, 3);
-    vector m3 = cml_matrix_get_col(&m, 4);
-
     vector r0 = cml_vec_vec_add(
         cml_vec_vec_add(cml_vector_scaler_mult(cml_matrix_get_col(&m, 1),
                                                rotate.values[0][0]),
