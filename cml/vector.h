@@ -11,7 +11,7 @@
     (dimension and values)
 */
 typedef struct {
-    u32 dimension;
+    cml_u32 dimension;
     float* values;
 } vector;
 
@@ -20,20 +20,20 @@ typedef struct {
     a given dimension (allocates space for
     n values | n = dimension).
 */
-vector cml_vector_allocate(u32 dimension);
+vector cml_vector_allocate(cml_u32 dimension);
 
 /*
     Constructs and returns a vector with a given dimension.
     All values of the vector will be set to the
     given value.
 */
-vector cml_vector_default(u32 dimension, float value);
+vector cml_vector_default(cml_u32 dimension, float value);
 
 /*
     Constructs and returns a vector with a given dimension.
     All values of the vector will be set to zero.
 */
-vector cml_vector_empty(u32 dimension);
+vector cml_vector_empty(cml_u32 dimension);
 
 /*
     NOTE: Not recommended to use this function in client code.
@@ -54,7 +54,7 @@ vector cml_vector_copy_mem(vector* v);
 
 void cml_vector_free_mem(vector* v);
 
-vector clm_vector_construct(u32 dimension, ...);
+vector clm_vector_construct(cml_u32 dimension, ...);
 
 /*
     This function prints a given vector "v" values
@@ -217,7 +217,7 @@ void cml_vector_raise_by(vector* v, float val);
     Returns the value at the given index from
     the given vectors values array.
 */
-float cml_vector_get_value_at_index(vector v, u32 index);
+float cml_vector_get_value_at_index(vector v, cml_u32 index);
 
 /*
     Returns the distance between two vectors.

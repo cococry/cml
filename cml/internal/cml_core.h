@@ -8,15 +8,15 @@ typedef unsigned char BOOL;
 #define NUM_OF_ARGS(type, ...) \
     (sizeof((type[]){0.0f, ##__VA_ARGS__}) / sizeof(type) - 1)
 
-typedef unsigned char u8;
-typedef unsigned short u16;
-typedef unsigned int u32;
-typedef unsigned long long u64;
+typedef unsigned char cml_u8;
+typedef unsigned short cml_u16;
+typedef unsigned int cml_u32;
+typedef unsigned long long cml_u64;
 
-typedef signed char i8;
-typedef signed char i16;
-typedef signed char i32;
-typedef signed char i64;
+typedef signed char cml_i8;
+typedef signed short cml_i16;
+typedef signed int cml_i32;
+typedef signed long long cml_i64;
 
 void swap_int(int* _1, int* _2);
 

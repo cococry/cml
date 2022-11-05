@@ -12,7 +12,7 @@
     (rows, columns and values)
 */
 typedef struct {
-    u32 rows, cols;
+    cml_u32 rows, cols;
     float** values;
 } matrix;
 
@@ -20,19 +20,19 @@ typedef struct {
     Allocates a empty matrix with space to
     hold rows * cols values and returns it.
 */
-matrix cml_matrix_allocate(u32 rows, u32 cols);
+matrix cml_matrix_allocate(cml_u32 rows, cml_u32 cols);
 
 /*
     Returns an identity matrix with a given
     dimension.
 */
-matrix cml_matrix_identity(u32 dimension);
+matrix cml_matrix_identity(cml_u32 dimension);
 
 /*
     Returns a empty matrix (all zeros) with
     a size of given parameters rows * cols.
 */
-matrix cml_matrix_empty(u32 rows, u32 cols);
+matrix cml_matrix_empty(cml_u32 rows, cml_u32 cols);
 
 /*
     NOTE: Use cml_matrix() macro in client code istead
@@ -43,7 +43,7 @@ matrix cml_matrix_empty(u32 rows, u32 cols);
     are then stored in order in the matrix. This matrix
     will be returned.
 */
-matrix cml_matrix_construct(u32 rows, u32 cols, u32 num_values, ...);
+matrix cml_matrix_construct(cml_u32 rows, cml_u32 cols, cml_u32 num_values, ...);
 
 /*
     Copies a given matrix "m" and returns it.
@@ -69,13 +69,13 @@ BOOL cml_matrix_compare(matrix m1, matrix m2);
     Returns the row from a given matrix "m" at a
     given index "row".
 */
-vector cml_matrix_get_row(matrix* m, u32 row);
+vector cml_matrix_get_row(matrix* m, cml_u32 row);
 
 /*
     Returns the colomn from a given matrix "m" at a
     given index "col".
 */
-vector cml_matrix_get_col(matrix* m, u32 col);
+vector cml_matrix_get_col(matrix* m, cml_u32 col);
 
 /*
     Returns a matrix with one row whose values are
@@ -89,9 +89,9 @@ matrix cml_matrix_to_row_vec(vector* v);
 */
 matrix cml_matrix_to_col_vec(vector* v);
 
-void cml_matrix_set_col(matrix* m, u32 col, vector v);
+void cml_matrix_set_col(matrix* m, cml_u32 col, vector v);
 
-void cml_matrix_set_row(matrix* m, u32 row, vector v);
+void cml_matrix_set_row(matrix* m, cml_u32 row, vector v);
 
 /*
     Adds the given scaler to every value of a matrix that
@@ -204,25 +204,25 @@ matrix cml_matrix_transpose(matrix* m);
     Swaps the two given rows "row_1" and "row_2" in the given
     matrix "m".
 */
-void cml_matrix_swap_rows(matrix* m, u32 row_1, u32 row_2);
+void cml_matrix_swap_rows(matrix* m, cml_u32 row_1, cml_u32 row_2);
 
 /*
     Adds all values of the the given row "row_2" of the given
     matrix "m" to the given row "row_1" of the same matrix.
 */
-void cml_matrix_add_rows(matrix* m, u32 row_1, u32 row_2);
+void cml_matrix_add_rows(matrix* m, cml_u32 row_1, cml_u32 row_2);
 
 /*
     Multiplies a given row "r" of a given matrix "m" by
     a given scaler.
 */
-void cml_matrix_mulitply_row(matrix* m, u32 r, float scaler);
+void cml_matrix_mulitply_row(matrix* m, cml_u32 r, float scaler);
 
 /*
     Adds the given row "row_2" of a given matrix "m" multiplied
     with the given scaler to the given row "row_1".
 */
-void cml_matrix_add_mulitple_rows(matrix* m, u32 row_1, u32 row_2,
+void cml_matrix_add_mulitple_rows(matrix* m, cml_u32 row_1, cml_u32 row_2,
                                   float scaler);
 
 /*
@@ -255,7 +255,7 @@ matrix cml_augment_matrix(matrix* m1, matrix* m2);
     matrix "m" with the given column "ex_col" and
     the given row "ex_row" excluded.
 */
-matrix cml_matrix_splice(matrix* m, u32 ex_row, u32 ex_col);
+matrix cml_matrix_splice(matrix* m, cml_u32 ex_row, cml_u32 ex_col);
 
 #define cml_matrix(rows, cols, ...)                                   \
     cml_matrix_construct(rows, cols, NUM_OF_ARGS(float, __VA_ARGS__), \

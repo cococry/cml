@@ -18,8 +18,8 @@ matrix cml_rotate(matrix m, float angle, vector v) {
     assert(m.cols == 4 && m.rows == 4);
 
     const float a = angle;
-    const float c = cos(a);
-    const float s = sin(a);
+    const float c = (float)cos(a);
+    const float s = (float)sin(a);
 
     vector axis = cml_vector_normalized(v);
 
@@ -115,7 +115,7 @@ matrix cml_look_at(vector eye, vector center, vector up) {
 
 matrix cml_perspective(float fov, float aspect_ratio, float near_plane,
                        float far_plane) {
-    const float tan_half_fov = tan(fov / 2);
+    const float tan_half_fov = (float)tan(fov / 2);
 
     matrix ret = cml_matrix_empty(4, 4);
     ret.values[0][0] = 1 / (aspect_ratio * tan_half_fov);
